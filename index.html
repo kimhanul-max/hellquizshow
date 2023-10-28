@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>나락퀴즈쇼</title>
+        <style>
+            @font-face { 
+            font-family: "type";
+            src: url(./DXTypeB-KSCpc-EUC-H.ttf);
+            font-weight: normal;
+            } 
+            body{
+                font-family: "type";
+                text-align: center;
+                background-color: black;
+            }
+            img{
+                width: 20%;
+            }
+            @keyframes typing{
+            from{ width: 0; }
+            }
+            
+            @keyframes cursor{
+            50%{ border-color: transparent; }
+            }
+            
+            h3{
+                color: white;
+                text-decoration: underline 1px;
+                width: 130ch;
+                overflow: hidden; 
+                white-space: nowrap;
+                border-right: .6em solid white;
+                animation: typing 12s steps(129) infinite,
+                cursor 0.5s steps(1) infinite;
+            }
+            button{
+                font-family: "type";
+                border: none;
+                background-color: black;
+                color: white;
+                display: inline-block;
+                padding: 10px 20px;
+                color: #fff; /* 텍스트 색상 */
+                font-size: 45px; /* 글꼴 크기 */
+                cursor: pointer;
+                text-align: center;
+                opacity: 0; /* 초기에 숨길 것입니다 */
+                animation: appear 0.5s linear 6s forwards; /* appear라는 애니메이션을 사용합니다 */
+                margin-top: 200px;
+            }
+            button:hover{
+                text-decoration: underline 1px;
+                color: red;
+            }
+            @keyframes appear {
+            0% {
+                opacity: 0; /* 시작 시 투명하게 해요 */
+            }
+            100% {
+                opacity: 1; /* 애니메이션이 끝나면 보이게 만들어요 */
+            }
+            }
+        </style>
+    </head>
+        <body>
+            <img src="나락.PNG" alt="나락 퀴즈쇼">
+            <h3>'Cancel Culture': 유명인이나 공적 지위가 있는 사람이 논쟁이 될 만한 행동이나 발언을 했을 때, SNS나 인터넷 커뮤니티 등을 통해 대중의 공격을 받고 지위나 직업을 박탈하려는 캠페인의 대상이 되는 현상, 즉 나락.</h3>
+            <button onclick="location.href = 'quiz.html'">시작하기</button>
+        </body>
+        <script>
+            btn = document.querySelector("button");
+            btn.addEventListener("mouseover", () => {
+                btn.innerText = "평판 나락가기"
+        });
+        </script>
+    </html>
