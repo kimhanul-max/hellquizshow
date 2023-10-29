@@ -26,6 +26,7 @@
             }
             
             h3{
+                font-size: 25px;
                 color: white;
                 text-decoration: underline 1px;
                 width: 130ch;
@@ -47,7 +48,7 @@
                 cursor: pointer;
                 text-align: center;
                 opacity: 0; /* 초기에 숨길 것입니다 */
-                animation: appear 0.5s linear 6s forwards; /* appear라는 애니메이션을 사용합니다 */
+                animation: appear 0.5s linear 4s forwards; /* appear라는 애니메이션을 사용합니다 */
                 margin-top: 200px;
             }
             button:hover{
@@ -72,7 +73,7 @@
         <script>
             btn = document.querySelector("button");
             btn.addEventListener("mouseover", () => {
-                btn.innerText = "평판 나락가기"
+                btn.innerText = "나락가기"
         });
         </script>
     </html>
