@@ -49,6 +49,11 @@ let i = 0;
 let j = 0;
 
 function createQuiz() {          
+      // 새로운 질문이 생성될 때 타이머를 시작합니다.
+      audio.currentTime = 0; 
+      timerDisplay.textContent = "1:00";
+      clearInterval(timer); // 타이머를 정지합니다.
+      startTimer();
   document.body.style.backgroundColor = "#272829";
     for (let i = 0; i < choice.length; i++) {
         choice[i].classList.remove("disabled");
@@ -58,12 +63,11 @@ function createQuiz() {
         j++;
     }
     container.children[j].classList.remove("inv");
-
-    // 새로운 질문이 생성될 때 타이머를 시작합니다.
-    audio.currentTime = 0; 
-    timerDisplay.textContent = "1:00";
-    clearInterval(timer); // 타이머를 정지합니다.
-    startTimer();
+    if (j === container.children.length - 1) {
+      timerDisplay.textContent = " ";
+      clearInterval(timer);
+      audio.pause();
+    }
 }
 function playAudio() {
   audio.play();
