@@ -11,55 +11,57 @@ let timerDisplay = document.querySelector("#timer"); // 타이머 표시에 사�
 function showModal(event) {
   event.parentNode.querySelector('dialog').showModal();
 }
-
+function txtChose(target) {
+  target.style.color = "#00A9FF";
+  for (let i = 0; i < choice.length; i++) {
+      choice[i].classList.add("disabled");
+  }
+  audio.currentTime = 0; 
+  audio.pause();
+  timerDisplay.textContent = "1:00";
+  clearInterval(timer); // 타이머를 정지합니다.
+}
 function chose(target) {
-    target.style.backgroundColor = "gray";
+    target.style.backgroundColor = "#00A9FF";
     for (let i = 0; i < choice.length; i++) {
         choice[i].classList.add("disabled");
     }
-    audio.pause();
     audio.currentTime = 0; 
-    timerDisplay.textContent = "1:30";
+    audio.pause();
+    timerDisplay.textContent = "1:00";
     clearInterval(timer); // 타이머를 정지합니다.
 }
-
+function imgChose(target) {
+  target.style.border = "solid 5px #00A9FF"
+  for (let i = 0; i < choice.length; i++) {
+      choice[i].classList.add("disabled");
+  }
+  audio.currentTime = 0; 
+  audio.pause();
+  timerDisplay.textContent = "1:00";
+  clearInterval(timer); // 타이머를 정지합니다.
+}
 function showBtn(t) {
     t.querySelector(".open").style.display = 'inline';
 }
 
-var arr = [];
 let i = 0;
 let j = 0;
 
-function Uni(min, max, count) {
-    if (max - min + 1 < count) {
-        return null;
-    }
-
-    const uniqueIntegers = new Set();
-    while (uniqueIntegers.size < count) {
-        const randomInt = Math.floor(Math.random() * (max - min + 1)) + min;
-        uniqueIntegers.add(randomInt);
-    }
-
-    arr = Array.from(uniqueIntegers);
-}
-
-Uni(0, container.children.length - 1, container.children.length);
-
-function createQuiz() {
+function createQuiz() {          
+  document.body.style.backgroundColor = "#272829";
     for (let i = 0; i < choice.length; i++) {
         choice[i].classList.remove("disabled");
     }
-    container.children[arr[j]].classList.add("inv");
+    container.children[j].classList.add("inv");
     if (j < container.children.length - 1) {
         j++;
     }
-    container.children[arr[j]].classList.remove("inv");
+    container.children[j].classList.remove("inv");
 
     // 새로운 질문이 생성될 때 타이머를 시작합니다.
     audio.currentTime = 0; 
-    timerDisplay.textContent = "1:30";
+    timerDisplay.textContent = "1:00";
     clearInterval(timer); // 타이머를 정지합니다.
     startTimer();
 }
@@ -68,10 +70,16 @@ function playAudio() {
 }
 function startTimer() {
   timerDisplay.style.color = "white";
-    let seconds = 90;
+    let seconds = 60;
     timer = setInterval(function() {
       if (seconds > 0) {
         seconds--;
+      }
+      if (seconds <= 0) {
+        document.body.style.backgroundColor = "#ED2B2A";
+        clearInterval(timer); 
+        audio.currentTime = 0; 
+        audio.pause();
       }
         // 타이머 표시를 업데이트합니다.
         timerDisplay.textContent = formatTime(seconds);
@@ -90,7 +98,7 @@ function formatTime(seconds) {
 
 function init() {
     startTimer();
-    container.children[arr[j]].classList.remove("inv");
+    container.children[j].classList.remove("inv");
 }
 init();
 

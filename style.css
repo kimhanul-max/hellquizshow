@@ -1,16 +1,15 @@
 img{
-    width: 200px;
+    width: 300px;
     display: block;
-    height: 278px;
+    height: 420px;
 }
 .flex{
   display: flex;
   justify-content: space-between;
 }
 body{
-    background-color: #000000;
+    background-color: #272829;
     text-align: center;
-    background-image: url("https://www.transparenttextures.com/patterns/assault.png");
 }
 .img {
   width: 200px;
@@ -20,7 +19,15 @@ body{
   margin-bottom: 20px;
   display: block;
 }
-.songdo-name{
+.solo-img {
+  width: 400px;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+.name{
   padding-top: 20px;
   border-top: solid 1px black;
   color: #00A9FF;
@@ -34,6 +41,8 @@ body{
     color: white;
 }
 #timer{
+  margin: 0;
+  font-size: 30px;
   color: white;
 }
 .close{
@@ -42,6 +51,11 @@ body{
 }
 .close:hover{
   background-color: #A2FF86;
+}
+h1{
+  font-size: 70px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 /* 기본 버튼 스타일 */
 button {
@@ -62,8 +76,8 @@ button:hover{
   background-color: #61677A;
 }
 dialog{
-  width: 1300px;
-  height: 700px;
+  width: 90%;
+  height: 90%;
 }
 .inv{
     display: none;

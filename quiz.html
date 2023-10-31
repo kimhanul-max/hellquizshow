@@ -2,69 +2,129 @@
     <meta charset="UTF-8">
     <title>나락퀴즈쇼</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/나락퀴즈쇼/나락.PNG">
 </head>
     <body>
-        <h2 id="timer">1:30</h2>
+        <h2 id="timer">1:00</h2>
         <div class="container">
+            <div class="inv" style="text-align: center;">
+                <h1>Q. 다음 중 친일파가 쓴 시는?</h1>
+                    <p> 
+                        <h2 style="display: inline; margin: 20px; font-size: 35px;" class="choice" src="/나락퀴즈쇼/태극기/1.png" onclick="showBtn(this.parentNode); txtChose(this)">1. 방 치우고 소세하고 다 차렸느냐</h2>
+                        <h2 style="display: inline; margin: 20px; font-size: 35px;" class="choice" src="/나락퀴즈쇼/태극기/2.png" onclick="showBtn(this.parentNode); txtChose(this)">2. 어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다</h2>
+                    </p>
+                    <p>
+                        <h2 style="display: inline; margin: 20px; font-size: 35px;" class="choice" src="/나락퀴즈쇼/태극기/3.png" onclick="showBtn(this.parentNode); txtChose(this)">3. 매운 계절의 채찍에 갈겨</h2>
+                        <h2 style="display: inline; margin: 20px; font-size: 35px;" class="choice" src="/나락퀴즈쇼/태극기/4.png" onclick="showBtn(this.parentNode); txtChose(this)">4. 살랑살랑 솟아나네 감자 굽는네</h2>
+                    </p>
+                    <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 확인</button>
+            <dialog> 
+                <div class="card">
+                    <div>
+                        <h2 style="font-size: 50px;" >정답: 1번 우리집의 노래/이광수</h2>
+                    </div>
+                </div>
+                <form method="dialog">
+                    <button class="close">X</button>
+                </form>
+            </dialog>
+            </div>
+            <div class="inv" style="text-align: center;">
+                <h1>Q. 다음 인물은 친일파인가요? 독립운동가인가요?</h1>
+                <img class="solo-img" src="https://cdn.pajuminbo.com/news/photo/202210/2659_3498_1953.png">
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">친일파</button>
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">독립운동가</button>
+                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
+            <dialog> 
+                <div class="card">
+                    <img class="solo-img" src="https://cdn.pajuminbo.com/news/photo/202210/2659_3498_1953.png">
+                    <div>
+                        <h2 class="name">독립운동가 정태진 선생</h2>
+                        <h3>파주 출신인 그는, 한글 지킴에 온몸을 바친 독립운동가이자, 한글 학자이다.</h3>
+                    </div>
+                </div>
+                <form method="dialog">
+                    <button class="close">X</button>
+                </form>
+            </dialog>
+            </div>
+            <div class="inv" style="text-align: center;">
+                <h1>Q. 다음 인물은 친일파인가요? 독립운동가인가요?</h1>
+                <img class="solo-img" src="https://ojsfile.ohmynews.com/down/images/1/jwh59_196594_1[255497].jpg">
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">친일파</button>
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">독립운동가</button>
+                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
+            <dialog> 
+                <div class="card">
+                    <img class="solo-img" src="https://ojsfile.ohmynews.com/down/images/1/jwh59_196594_1[255497].jpg">
+                    <div>
+                        <h2 class="other-name">친일파 배정자</h2>
+                        <h3>이토 히로부미의 수양딸로, 대한제국과 일제강점기에 일본의 밀정으로 활동했다.</h3>
+                    </div>
+                </div>
+                <form method="dialog">
+                    <button class="close">X</button>
+                </form>
+            </dialog>
+            </div>
             <div class="inv">
-                <h1>Q. 다음 중 가장 좋아하는 연예인을 고르시오</h1>
+                <h1>Q. 2002년 월드컵 패배의 원흉이라 생각되는 인물을 고르시오</h1>
                 <span class="flex">
                     <div>
-                        <img src="https://i.namu.wiki/i/0fdBbHtaZS294nfSydpdSvihgnS1M56RJsSMbjs7TrAJObdL6evVu_PAaHQyYiMyc4cJfwM1rd9liGug06UGXA.webp" alt="빅뱅 승리">
-                        <button class="choice" onclick="alert('참가자 분의 취향을 존중합니다.'); chose(this)">승리</button>
+                        <img src="https://cdn.besteleven.com/news/photo/202303/217341_113856_4036.jpg">
+                        <button class="choice" onclick="alert('참가자 분의 선택을 존중합니다.'); chose(this)">이천수</button>
                     </div>
                     <div>
-                        <img src="https://i.namu.wiki/i/87JYKWcuXdS2OaVWZL8he0EKTIiUwhQk9wydJmV77mjlBL1gU4EAYpjpkSfeE-twDEKdde6xGWfhQEfGLJDHH35_Mz_RH-N_RhMumO7hrUGMxNIp4g3G5-St4ZmOYtpXWp0u5dz6_anrs0XDYs9IiQ.webp" alt="배우 이선균">  
-                        <button class="choice" onclick="alert('참가자 분의 취향을 존중합니다.'); chose(this)">이선균</button>
+                        <img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202205/30/eb06fc6a-69b6-4abd-b5fd-bee5baf89951.jpg">  
+                        <button class="choice" onclick="alert('참가자 분의 선택을 존중합니다.'); chose(this)">안정환</button>
                     </div>
                     <div>
-                        <img src="https://images.khan.co.kr/article/2023/02/13/news-p.v1.20230213.ca515b85661d41a48e8fbd72616ed444_P1.jpg" alt="배우 유아인">
-                        <button class="choice" onclick="alert('참가자 분의 취향을 존중합니다.'); chose(this)">유아인</button>
+                        <img src="https://img.khan.co.kr/news/2021/10/07/l_2021100801000879600079581.jpg">
+                        <button class="choice" onclick="alert('참가자 분의 선택을 존중합니다.'); chose(this)">박지성</button>
                     </div>
                     <div>
-                        <img src="data:image/jpeg;base64,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" alt="음악 프로듀서 돈 스파이크">
-                        <button class="choice" onclick="alert('참가자 분의 취향을 존중합니다.'); chose(this)">돈 스파이크</button>
+                        <img src="https://i.namu.wiki/i/HtCwlRdUD6iZzSNMwWsYEyXj8K63TsXqOvsZYWG3DbhqlcaM6SBl_QJyIOKY_hrk9Q7PZdGYFUuCQcXmnLwEmw.webp">
+                        <button class="choice" onclick="alert('참가자 분의 선택을 존중합니다.'); chose(this)">홍명보</button>
                     </div>
                 </span>
             </div>
-            <div class="inv">
-                <h1>Q. 다음 중 국기를 계양하지 않아도 되는 날을 고르시오</h1>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">개천절</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">제헌절</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">6.25 전쟁일</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">한글날</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">국군의 날</button>
-                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
-                <dialog>
-                    정답은 한글날이었습니다.
-                    <form method="dialog">
-                        <button class="close">닫기</button>
-                    </form>
-                </dialog>
-            </div>
-            <div class="inv">
-                <h1>보너스퀴즈. 잼버리 사태 누구 잘못인가요?</h1>
-                <button class="choice" onclick="alert('참가자 분의 취향을 존중합니다.'); chose(this)">여가부</button>
-                <button class="choice" onclick="alert('참가자 분의 취향을 존중합니다.'); chose(this)">전북도청</button>
-                <button class="choice" onclick="alert('참가자 분의 취향을 존중합니다.'); chose(this)">현정부</button>
-                <button class="choice" onclick="alert('참가자 분의 취향을 존중합니다.'); chose(this)">전정부</button>
-            </div>
-            <div class="inv">
-                <h1>보너스퀴즈. 지금 계신 선생님들중 자신이 제일 싫어하는 선생님은 누구인가요?</h1>
-            </div>
             <div class="inv" style="text-align: center;">
-                <h1>Q. 다음 인물은 송도고 출신인가요?</h1>
-                <img class="img" src="https://i.namu.wiki/i/SHzvGostIqunqkwYstpLA9RYjywNeh1BtYXGT7m_TTKQZyGbxL4rxHsrBQsaKhaT7g3xS9fj2WjAeGzGyE1s0DMf7qqfZfE3kRQiFNZUlZcr3e-0-VVAzxCveCz_V2bIZURqCr6-ctkjC54msD9XHA.webp" alt="곤충학자 석주명">
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">예</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">아니요</button>
-                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
+                <h1>Q. 다음 중 가장 후원하고 싶은 아이를 고르시오</h1>
+                <span class="flex">
+                    <img class="choice" src="https://mblogthumb-phinf.pstatic.net/MjAxODA5MTBfMTYg/MDAxNTM2NTU2MzQ1NTAy.PlhFj30h76zoQC0nCOvHtsYJAqW97ulYuwpb6a66xcIg.wVHnV6k-h3DwyYGWIvsOhAE-CYhezmQmYppg53lzD-Qg.JPEG.wing04011/9.jpg?type=w800" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="https://mblogthumb-phinf.pstatic.net/20121220_76/bbarksan_1356005868851sc3iV_JPEG/1003.jpg?type=w420" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="data:image/jpeg;base64,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" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="https://i.namu.wiki/i/w9AB6aoWRSDyMXoB9ZBJrP5BkxCYWkUiHuWlOsBQAAeRsz-aQPz0tRBmfVIpXJTNNiqI7HTEZ4ipq6RsMjAfvQ.webp" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                </span>
+                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">인물 정보</button>
             <dialog> 
                 <div class="card">
-                    <img class="img" src="https://i.namu.wiki/i/SHzvGostIqunqkwYstpLA9RYjywNeh1BtYXGT7m_TTKQZyGbxL4rxHsrBQsaKhaT7g3xS9fj2WjAeGzGyE1s0DMf7qqfZfE3kRQiFNZUlZcr3e-0-VVAzxCveCz_V2bIZURqCr6-ctkjC54msD9XHA.webp" alt="곤충학자 석주명">
+                    <img class="solo-img" src="https://mblogthumb-phinf.pstatic.net/MjAxODA5MTBfMTYg/MDAxNTM2NTU2MzQ1NTAy.PlhFj30h76zoQC0nCOvHtsYJAqW97ulYuwpb6a66xcIg.wVHnV6k-h3DwyYGWIvsOhAE-CYhezmQmYppg53lzD-Qg.JPEG.wing04011/9.jpg?type=w800">
                     <div>
-                        <h2 class="songdo-name">곤충학자 석주명</h2>
-                        <h3>송도고 출신인 그는,</h3>
-                        <h3>나비 사랑에 한평생을 바친 인물로 가장 유명하며, 현재 대한민국에 서식하는 나비들의 한국 명칭은 모두 석주명이 지어준 이름이라고 봐도 과언이 아니다.</h3>
+                        <h2 class="other-name">제프리 다머자</h2>
+                        <h3>제프리 다머는 20세기 후반에 미국 밀워키와 위스콘신에서 총 17명을 살해하고 사체 절단 및 인육을 먹은 살인마이다.</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="solo-img" src="https://mblogthumb-phinf.pstatic.net/20121220_76/bbarksan_1356005868851sc3iV_JPEG/1003.jpg?type=w420">
+                    <div>
+                        <h2 class="other-name">개리 리지웨이</h2>
+                        <h3>개리는 공식적으로 48명이 넘는 매춘부를 살해한 미국 역대 최대의 연쇄 살인마이다.
+                            희생자의 시신을 대부분 그린 강에 유기해서 ‘그린 강의 살인자’라는 별명이 있다. </h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="solo-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhUYGBgaGRwaHBkaHBoZHBwcGhwaGhoYGBoeIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMDw8QGBERGDEdGB0xNDQ0MTE0MTQxNDE0NDQ0PzQxMTQ/NDQ0NDQ0NDQ/MTQxNDExMTQ/MTE/MTExMTExMf/AABEIAQgAvwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgEAB//EADoQAAIBAwIEAwUHBAIBBQAAAAECAAMEESExBRJBUSJhcTKBkbHBEyNCUnKh8AaC0eEzYrIUFaLC8f/EABkBAQEBAAMAAAAAAAAAAAAAAAABAgMEBf/EABwRAQEBAAIDAQAAAAAAAAAAAAABESFBEjFRAv/aAAwDAQACEQMRAD8ACq7mSzpO1BrOEaTz47ihzO8NPjf3Tjid4Z7beglDJxofSLxvGFRdDFxlItEizTxOmZQamBAs5tRLmrkjG0DFSc+2gEU6x2909VHU6wZa+u4HX3/Gd/8AUA7+v81gFB2ABG0so3H5h+0pp1h28/8Ac4iZY+Z2z+8GCabguSPy/Iy5ngLry7H3/wC5KjW3DH3wYIztHFP/ABE6H2Y5QQiniXsD9S/OWUtpXxEeFf1rLaUI7VGkEojxe+GNtBKR8UA3l2gQT74/pH1hywVV++b9I+sBTX3nJK4GsiBMxoO7YzJcL/5D6fWV1N5K0flcnHTA9Zoplc1APWK7g6bydernxE+hi67uO3WESe4xuYNUuSdvj/mU00yfOGJa+sgqVies8KfrGFK18t4Qtge0oTvS/wBTgpkDf+eceGw/hlFW3UbyBelZx5jvj6y22udTzHBOR/uWvT7SirQ1zKDxVX4nTPT/AFPcgOcdj3i5XZdv9wmlXGNs5+HpAPpOScnAzjQaY6bCaCksylN8ZJP86aTT2FUMoIPrBXOJL4V/Ws9Tk+IjRP1j5GcQwJttAqR8R9Yd0gdP2j6wDEEpQffP+lfrCEGkopv9836F+siE9x7QkGEncHUSLHQyNQG07roc42I0zOsTsJTXc+h7dsSxKHuammnr/PjA0GfU7/6k+Us2YTQtyTtFo7b2+cR1b8O5vLz7SVnbhRk/DtHNsM9JBQvDwANMy4WhMcW1rmHJZRqayVWwPnAbm0xN1UtARtFt3ZDtKaxRp46SFalH9ez12gVzQxKpDUTpBj4Tnp5RrWp66QW4pjpA8lYNjlXA03198P4ZWKONdGO31iim5XTH89IQtRyR0126+Uo1vEX0T9X/ANTOUt4pq3hZaeTk85/YGMrV8yApjpA6Wp98LI0glP2j6wg5W8oNT/5n/Sv1hoMGQfev+lfrJQkrZyJTUbAhF5uItrPkmFjhfsTn+bQW4bTw6S0Ht+/Q+UErViWAx1iFoq1pRqgAgdqBiG0pKo21pliBNFZ22MZi3hagazQ28jNGWdPEP5INbQ0TUZod0gdzSjQpKKwGDmXEjO1KAGpOIpvURh4XGRpHF2/OcKJJODDlyd5Na1hbmmQf3gdXWabiXDgDocaxO9LBIMNkVXTWXpXXGg1/nWduaeDGHCeF8yGo4AC9/nNMhUJPKDsCT26R1YVAInwGbw7Q+g2JKp6G0gqDxe+ToVNJ6nv75Acia+6DIv3r+i/WGKINS/5X9F+RhGdvfaGsDcYOcQ64UQVxkSqDZhjXPygVR8tgDEMdME9IIzDIx8ZNSmNs2msOt21EWUDprGNiMkSNNDYDaaS0TSZq1uETqI1t+NIBIzWkopiEgzPW/HEJ3h9G/BO81KxZTF3wMxFxG4ZjyiNqhysztR8VBk6Zir+TCwtlUZO8jxHitJBhnGe25+Aim5q1KzilTbkBJ8XkNz5CJjwZ/vKZRWqK4w5L5I8h7OMDr3klXErvi6O3hzOU7bn3jf8A9oDuHZVVsAYUAAYHlvCntT7/ADhWN4jZkaw1KgNsqbZ0PxjO+tcjaLbC3DNyNtnMoofh3LTDdj8Vbr7j84OqzaXFon/pmQHOBkH5zIKnTtKsq6m0KttT74KBCrIa++A0SUUl+9f0X5GFIIMg+9f+35GEZyt/mDkabQpxkShjpCll2h5vdBawA+P7RjcqSDiLXTO5zMi+i8OsqpG2/SKqTxlZPgg4kWNBZWHPqd45o8FGNWimzveUZJkqv9RMPYGm2YSmdxwsKNGAgdvcsjYPSFWdqtZjzVcgpzKwDDrthsZ26Ra9qyOQxJ1OD3HTI6QjbcOuw6RTe0CWMH4bX5cCG3NQtqBCZyDtgUbJGenaO6CBhkA/GJmcdTGXDbgHTMFMRbiRa3yIUplk34s6RXtrodJmPYrKfMzaXzAAzF8Qcc4PYj/cmNQYlw70nfHKM8oG2c6Zz6xPcU8MR5x7ZOmOYOpAPsnwkeoMU8TuFZ/Dj1G2ZVDiFWS/OCjvDLI4MBrSg9P/AJKn9vylqPKKJ+8qf2/KBnnXTEFdYW43g7GRQ9SA3abEdoe0Cv8AQZgoNtIdZPmQHKGyVzCEpoCGTY7jtLUFPSZtB1jXh9kwQocEHU6de4MhaAECPLWntMqI4YnInKOmnnBOIbxzbW2kWcVTGYRVw1cuFmspWK41MytG4p0lDs4BO2ZfS/qlG0VgT74mJTO+s6Sks5wBqTtFK3aFg1LOM4zqAfSHW1q1c89VfBuFOxPcjrC2tUBzjbYdvSByldEGXniGILUQCCLUy2JZQVcXXMN5mL5M82I7an4oFcJgNKRlrsn7T+wfMy6nKrjWp/YvzMsSGl/NC7N8mAmW2hlDyk0qonxv/b8pyg2kjS9t/wC35SIRZ0+MFd5e/WBEQrhbMEuz4YXiC3SaQjtRPCPSXWNszKSg1B1E46eEY7SzhV79lUBPsnQj1gMbNyGwZreHttMhe3WWBA/u6GNuGXw76zNG1pMMRH/UA0GPfLUvhjUwK+uQ0MyFlHhRc5ZgV6AjJEfcOskTAVFz3wM/GC2NcYxGVOsq6nftDRus5UWBJxVO+fIS+krVV58hUPXuJWAN/eKgOMZiPhd89WqSF8C5yT18hNNdUUTPKobK4JOp+MBsUC6AAeQhZRNZRmIeIPgN5x1dviZfib5065lWM3cX33gCrr7J19rU4x20IjIKQxVhhgcEb4I6ZEU8UtGGKgAA5+XIOobAIyOncehk7eswbJJOmW65JlU3baStmkVYEZ7yNA4hTi1baTt/bqeo+UEovjEJtH8dT1X/AMZEJqqeUWOI3r7RQ8ioc+spuR4TLGGspuD4TKgqmMqPSC3NHWHWy+FfQTl0ukaLrNCyICwAJ190GaryuwU+zt5iDfbMBgaQB3IPN1zBrVW3ECdCYeHLCZa3uMx1Z3W2ZFW3l29AeFSexxmS4Xc1Kmro5XI68uR1jihXDoV09+xg1C/RGIdMH3wjZcKZAoVEx8P3haUQF5dl18I6Z1mXtP6ipJ+PT3zr/wBQPUOKSH9R/wASsWU1v3RNvhA7TOeaQtrF2PM7ZJh60cekL6BXzTL125nPlNBxa4wDM+MKpY+ZP+BCwj4ghLjHqfpIhNM99vSGimWfB9ptT/1Tt75O4TI0HfH0lVGm2ABnoDLbeDDVV8hIW9diSF11hTemZfYP95Uz3H/iIqS6IOozg9IZZV1LOSccxGM+QhHK20TVI4q9YorDeQUE+UrrnwnTpOmV1vZPpIphZnwL6SdxtK7PHIvoJG5rgDGdZQJVMBrqTCHfOsrd/PXpCB0yuoh1C69Zde01YI64HOuSOzDQ4gTW5GdCPlKnJ1acQI6xsKgf2hrMclUrvGdpf8p3kXWss+GoTqs1FpbIFGBMjw7jK4wdPfHCcZQDQ6wlaD7RQIvv7sAb4iO846oB1mXv+PFzyqcypIc3l19o/IDoNSYLeV11/Kn/AMm6D+fSC2KELv4m19B3Mso2RqMDtRQ6udAT69T5Q07ZoQhqOcs5xjsMQzgtvzvkjKoGdh6bD4wPidXL8iAjZQMdOk2XD7Nba0diPEynPnkYA/eEtYeq+FHpI2FULSd9OYtjzAI3+cqu36E4B09B9ZykuEC40/c+ZhpaaZChjoDt5yBEkyMQBk6aAduunvhyUVdfCcEAcwOuvcY3+kCyq2kVXAjFxpr2i+4EiAjnMhVHhMm4nhTz1/aTtUKVRgoUDGkspW5Y7e8/U9JelFV9r4bH39pJ6hIxgAdh9T1lQJVoYODr6QatSI2jAJ5Tzp5QABcj7NEPtKzH3HH1ja7rB1BVQugyBsSO/YwH7EFC3UHf9/pLLFxsdj0/xAEemucEcpkRTQZDcwOdCCCIzurU4BGo6dx5QRrVuYjkx0wwOR1669JUCo7Z8JzLmqOOuM9dZYvDzyFgw5s4CgHbHtZg1VnOjZOIEKhJ3fPxhlrbUxhmfJ7AfWC0n5T7Cn1GY1tbe4qaKpAPlyj4wCkdBqebXHhzqewP5R+80fDauFapUAZaeiIMcvMdAFHU+cB4XwFEPNVbJ/KDj99zLLi4QuSTypTOEQaDPUgDr5wOcNtC9V6r7517ZOpA9BgQr+oeMgpyDYH4xXU4kAgRDgczO7ep0A9wg9rZNXYMw5UB0B3KjqR0Eiqra25/G23QSypjOBDL6sB4FGggluFGp3hXVpE6DQdzK6wVdA+vkJKvcM2i/tJU+G1MZCn4SoIuiApJwBEle4zttO3t4XO2AOnnB0WZE0XJwIc4CAKvtn2j+X/qD3ln2P2SAnR2GQPyj8x8+0ppJk6n3yqZ8Kp2rDFbnD9yfCffiP1/pq3dcoxx0OeYTMtVQLyhebzMhaXr02zTcr5dPeIQz4h/TDp4k8Q8ojq0yMgj4zbcJ/qZXwlUcrd+hhXFeDJVHMuMwm/Xz2wTmLL10YDvjcfCcvuGFPvE1Q791PYy6tbtRq4OhBj6zuEfqA5Gqn2W/wByKSWID02POoKkaHOT6CNbpFDFnbxkDmA0yCPZxg7DAiri/DuQl0BXGrJ1HmvcSdi6ugZn8QOPM++US4e/2VQPyF0B0BPToDprOC1NRnPIqgnm5c8unYHB2juvXpImFR2YjIYkfHSALxXwcrDUag419JRKxpClvYs3/bmyPUZAnrrjJGijk/6uMfAjSTubvnpjlflAwCgwreo11EivDqRpO6EuUJ5g2Tle4z11hCmrxFmzrgnzyT7+0soocHlpuxIwGbQeZHU+6NbDg+XCAcoPi5tjykZGPdrNK1tRtkDKOZjoo3yYXWcsOAhV57jQDUJ1PbC/ImX3NQIuBgFtT5DoIwqcz5Zjnl3Pd/LyG0GTh3MS7nTtMdhJTtXqHwgmOKH9PDT7R8D8ohxuAnhRQPmYPVucDLnl167/AAmkH2lrRTRFGR1Op9YPd8UVB4iCc9Imu+ME5CA8u2YoWk9U6AmUwpQRjZ0wi/asMjOEH5m7nyEXmHNW5gg/Ci4A8ySSfiZlUmdnYs2Sx3hltaFs6QOnWKnIwD33k0ZyPab0zKpy3C1RQXbBOyggE5+UHfhacuftkB/LnP7wAW7HUnPrJtbeUI9dcPKKHDq6nflOSPURrwbjj0dHy6euo9O8SvaHovzlDI47iCtzxuxS6pfaUiCw1GPkfOZu2thUTTR10MB4fxR6LZQ47jow7ERnUvkLrXTw8xxUTse47gwgd67Ecj+0PZb6HyiWsGQ8y6YPiXoCOuO02d7w4V05l9oaiIEpE5JA50OCp/ENhp1lVdwziaVGKkKr4yNgCQNQPnCqtdCudNZnLlADpgdxjBB7SoXB6mAzv318OgxGPAWYo6YyGB0zjpjmHf3wDg3D3uHwDyoPabt5KOpjK2qLTuCtLmZM8nMDqT1wdv8AUIjw2s48TN0xknoOp8tP2Eb29bnbnY4AGEzuqdX/AFMdpXY2FMUmd/aDsoTOhKnTPXHWBVEd2IGe58/52kU3r8UpqOVdAIELxn1Gi9WbtAanImmOd/yjYep+k5Uo1GVi6kcuDjZQOgx0hF78WCZCDJ/MfpKrXh1SswZs4J9oyijcU0R86uxwAPwgdffDU466oqgBQpyCdT6YlVfxDhxCrTXYOAW7k4H1jR2pUFZF5crgb6k6ZmVueKVX8IY4J5j0176T1OicZbX1hMZ9W0lyNKa+Ax9cj0MkjTOqIU/tLqFWDMfDJW7iVTWkxOgjez4aW16fiboPTvF/CkQD7Sq2E6L1M5xTj7VPBTHIg2A3PrDJpdVqaDkTBPUxY7Kd4sSm52BHmZcLJvxMBCvXNNNgdewgb2zDXHxh1OoEOAU9SDmXPWRhlnBPYA/WBPhfGCmA5Ix8COxkOKVPFzqcHPhOM56jOv8AMQ+3/pt3XJKDK5wc5we/aIbpSjGlzaZ0wcrnyPSUDXXO/MxAJ3boT5gQa0ojnBf2c6gHBPoekufQYx4us8tMwNGl66oUp0lCEYJV1LAeRzpBzRKKjgEJz40OufIgYz03MShjtDH4qQgpkAgHIbZh694DRLt6Vdy4OmSA2urjI/8A2VVuMMx7A+1jc+Wegii4umdizHX/AFCuG3SITzIjg99x6GBF7ornTAIxprjXp2MtqcTaoTz1G1AB6ZC7AgbxlVppV/4yob8jgDP6WGnxiWrajmKMpR+inr6GAXTSmMYJ8s/MwlLVWOhzE32bDbpuOvwl1tdlWgaOlYYGFHqYwt+E8287wW6VwBNHQUSxm3HxR6mi+ny2kqbSkdQZ5TONoarZEqbIMihxOFpoXmtpr0g5uHJ8JwJGrVzpicU6gQCneum5PxllvfM2A0LWoxXB1EFqWw3GkotqnXvG/AeG85+0ceEaqDoCR1PkJnlbXfPeNK/FHcBOblQADA00gOOIcSYhqdHmbPtOPxHsOyzO3VlVXDOpAJxrp8IysL9UZSFyBGHEbha7oWbTmAVR9YCA2DjHmM+6WCzbtNQ9gftQvQKDG1vwpfxCE188q2bDXEFdO41n05uFowOmkS3n9M8w5lG+wg1i0GBg79PSTQ6Rjf8AC3pnVYAKTZOnbMKsp+/HlOXN25HI/jH4WPtKe6t28pZbOVORv/NDC+KWqOgqoMdHXsfzDygToWprI3StT0cfmG3N6wG5tD+IcrdD0PrGNtXNO5pVOlRU5vPIAP7ib+twyk6+JQQRGaluPmNhevRcZzifRuEXwqoGU+vlM1xTgBTJQc6dR+Jf8iLuF3jUGyp5kO47evY5lheWerW50dRkH34grp1HwhFs7YwrEN0GcZ9POce6OfEAceQBmNUMKhEm75ldwBnw7Hp2kM6Ss64XhFtvBTLqbYghsjlYNc186CSauOXfWANUlaFK+AJwVIJk95PJ36GE0Wl1jeMeC3SNWphicBx75nWOYbwsEOhG4YY+kJr6nc1QtyvYpiW3N/jKzPXVy5dGYagftnpLeKVzuAckZPliFw1apVUHCNggtny7yjhvHtw2up+HaKbe8quSELE8p0B/CBr7t4Ig5CvMMB9j9PKDGj4rxZCmqc2SBr6wRranVZwiBfAp3wM6nPnF3HByUl78wneC8QAdlZQQyLr1GnQwZhVW8DYI64k/tQmcHPNoR9Iw43TTk06nOZmg+DgnrCjbutpTH5NAfLOR8JvrbiqhFUthsD5TAoA64G41EibtiCrHxDVT9PhLEs1sq94yVAUOjfPzim/uqTuSylG/OmMN6rtBbe+Z0CkeLbm6+vrLLizVlGuMbSGMmFwfdnP+JOsvN08XcdfP1nZ6YUC6mcnp6ajHby7y4mdnpWlDSKzs9DKzl9ZIp+wnp6WCxaWvuJH+PhCeH0/GvYEHO2mQOs9PSLG4ubgfb0zg4wM57ZxtG3FKCNTLLjJHcAaz09C0qe1VFGOVWxjIO8W1AXTJwSnbsTuPMGenoIVcSuXcBSc8vXuAMj34l3D6jUqoyqOhCj2lGQQMMMnOxnZ6FO+NpSNLKNqdQn4vhuJi6gnp6EiVKsUYH3wy8pB0Drv1HWenoUPaXfLkfinHuW3LGenoR//Z">
+                    <div>
+                        <h2 class="name">마이크 타이슨</h2>
+                        <h3>미국의 전 복싱 선수이다. 1980년대와 1990년대에 활동했던 복싱 헤비급 슈퍼스타로, 짧지만 역사상 가장 센세이셔널한 전성기를 보내며 무하마드 알리와 함께 복싱의 아이콘이 되었다.</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="solo-img" src="https://i.namu.wiki/i/w9AB6aoWRSDyMXoB9ZBJrP5BkxCYWkUiHuWlOsBQAAeRsz-aQPz0tRBmfVIpXJTNNiqI7HTEZ4ipq6RsMjAfvQ.webp">
+                    <div>
+                        <h2 class="other-name">블라디미르 푸틴</h2>
+                        <h3>오사마 빈 라덴은 911테러를 주도한 알 카에다 지도자이다. 태러 이후, 은신처에서 생활하던 중 발각되어 결국 2011년에 미 특수부대에 의해 사살되고 말았다.</h3>
                     </div>
                 </div>
                 <form method="dialog">
@@ -73,78 +133,19 @@
             </dialog>
             </div>
             <div class="inv" style="text-align: center;">
-                <h1>Q. 다음 인물은 송도고 출신인가요?</h1>
-                <img class="img" src="https://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/03/21/d073425d-9762-4c03-b203-814838f33327.jpg">
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">예</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">아니요</button>
-                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
+                <h1>Q. 다음 중 올바른 태극기 문양은?</h1>
+                <span class="flex">
+                    <img class="choice" src="/나락퀴즈쇼/태극기/1.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="/나락퀴즈쇼/태극기/2.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="/나락퀴즈쇼/태극기/3.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="/나락퀴즈쇼/태극기/4.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                </span>
+                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">인물 정보</button>
             <dialog> 
                 <div class="card">
-                    <img class="img" src="https://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/03/21/d073425d-9762-4c03-b203-814838f33327.jpg">
+                    <img class="solo-img" src="/나락퀴즈쇼/태극기/4.png">
                     <div>
-                        <h2 class="other-name">아이돌 민호</h2>
-                        <h3>연수고 출신인 그는,</h3>
-                        <h3>대한민국의 가수 겸 배우, 보이그룹 SHINee의 멤버이며, 메인래퍼, 보컬을 맡고 있다.</h3>
-                    </div>
-                </div>
-                <form method="dialog">
-                    <button class="close">X</button>
-                </form>
-            </dialog>
-            </div>
-            <div class="inv" style="text-align: center;">
-                <h1>Q. 다음 인물은 송도고 출신인가요?</h1>
-                <img class="img" src="https://i.namu.wiki/i/kU7W3u1e-1O4EmZK-liTHYlhjThEhswzgTCObmucUyE5s_A1mndVoHZPPNv_TeD3mRWeritOdog1Zgqa6H1hwINxJjhc1jaZUyNYvwsyv497Yew-D-_aqNc9xX_pecUCeTCsYQ6hwr0dsddL5hGOxg.webp">
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">예</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">아니요</button>
-                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
-            <dialog> 
-                <div class="card">
-                    <img class="img" src="https://i.namu.wiki/i/kU7W3u1e-1O4EmZK-liTHYlhjThEhswzgTCObmucUyE5s_A1mndVoHZPPNv_TeD3mRWeritOdog1Zgqa6H1hwINxJjhc1jaZUyNYvwsyv497Yew-D-_aqNc9xX_pecUCeTCsYQ6hwr0dsddL5hGOxg.webp">
-                    <div>
-                        <h2 class="songdo-name">가수 박현빈</h2>
-                        <h3>송도고 출신인 그는,</h3>
-                        <h3>대한민국의 트로트 가수로, 트로트계의 황태자 불릴 정도로 유명하다.</h3>
-                    </div>
-                </div>
-                <form method="dialog">
-                    <button class="close">X</button>
-                </form>
-            </dialog>
-            </div>
-            <div class="inv" style="text-align: center;">
-                <h1>Q. 다음 인물은 송도고 출신인가요?</h1>
-                <img class="img" src="https://i.namu.wiki/i/hbt0uGSYXzRE_GL_cXxvCJ3YFNwQpulh8cMWQ9DMvVKgtPp9RBHQ8iTlFZGcCaWe0XtbRraxIhSV_hXpxbpbsYeaVDNmzsKiiXpmaqKger89H_dYv1ai-XsdA3VTzCn-b0l1kZukbVjKE4w4JRIR5A.webp">
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">예</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">아니요</button>
-                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
-            <dialog> 
-                <div class="card">
-                    <img class="img" src="https://i.namu.wiki/i/hbt0uGSYXzRE_GL_cXxvCJ3YFNwQpulh8cMWQ9DMvVKgtPp9RBHQ8iTlFZGcCaWe0XtbRraxIhSV_hXpxbpbsYeaVDNmzsKiiXpmaqKger89H_dYv1ai-XsdA3VTzCn-b0l1kZukbVjKE4w4JRIR5A.webp">
-                    <div>
-                        <h2 class="songdo-name">배우 정은우</h2>
-                        <h3>송도고 출신인 그는,</h3>
-                        <h3>대한민국의 배우로, 출연작으로는 추노, 하나뿐인 내편 등이 있다.</h3>
-                    </div>
-                </div>
-                <form method="dialog">
-                    <button class="close">X</button>
-                </form>
-            </dialog>
-            </div>
-            <div class="inv" style="text-align: center;">
-                <h1>Q. 다음 인물은 송도고 출신인가요?</h1>
-                <img class="img" src="https://img.seoul.co.kr/img/upload/2020/10/05/SSI_20201005175203_O2.jpg">
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">예</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">아니요</button>
-                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
-            <dialog> 
-                <div class="card">
-                    <img class="img" src="https://img.seoul.co.kr/img/upload/2020/10/05/SSI_20201005175203_O2.jpg">
-                    <div>
-                        <h2 class="other-name">친일파 박흥식</h2>
-                        <h3>진남포공립상공학교 출신인 그는,</h3>
-                        <h3>친일 반민족행위자로, 이미 사업을 시작한 1920년대부터 박흥식은 조선총독부와 긴밀한 관계를 유지하였고, 중일전쟁이 일어나자 군용비행기 헌납운동(소위 애국기 헌납운동)에 앞장섰다.</h3>
+                        <h2>정답: 4번</h2>
                     </div>
                 </div>
                 <form method="dialog">
