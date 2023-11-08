@@ -21,11 +21,16 @@ body{
 }
 .solo-img {
   width: 400px;
-  height: auto;
+  height: 500px;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   display: block;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  grid-gap: 20px;
 }
 .name{
   padding-top: 20px;
@@ -54,8 +59,12 @@ body{
 }
 h1{
   font-size: 70px;
+  color: white;
   margin: 0;
   margin-bottom: 20px;
+}
+.score-board{
+  color: #A2FF86;
 }
 /* 기본 버튼 스타일 */
 button {
@@ -92,4 +101,7 @@ dialog{
   margin: auto;
   display: block;
   box-shadow: 0px 0px 3px 2px gray;
+}
+.ending{
+  display: none;
 }

@@ -10,7 +10,7 @@
             <div class="inv" style="text-align: center;">
                 <h1>Q. 다음 중 친일파가 쓴 시는?</h1>
                     <p> 
-                        <h2 style="display: inline; margin: 20px; font-size: 35px;" class="choice" src="태극기/1.png" onclick="showBtn(this.parentNode); txtChose(this)">1. 방 치우고 소세하고 다 차렸느냐</h2>
+                        <h2 style="display: inline; margin: 20px; font-size: 35px;" class="choice" src="태극기/1.png" onclick="showBtn(this.parentNode); txtChose(this); score++">1. 방 치우고 소세하고 다 차렸느냐</h2>
                         <h2 style="display: inline; margin: 20px; font-size: 35px;" class="choice" src="태극기/2.png" onclick="showBtn(this.parentNode); txtChose(this)">2. 어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다</h2>
                     </p>
                     <p>
@@ -31,13 +31,13 @@
             </div>
             <div class="inv" style="text-align: center;">
                 <h1>Q. 다음 인물은 친일파인가요? 독립운동가인가요?</h1>
-                <img class="solo-img" src="https://cdn.pajuminbo.com/news/photo/202210/2659_3498_1953.png">
+                <img class="solo-img" src="정태진.png">
                 <button class="choice" onclick="showBtn(this.parentNode); chose(this)">친일파</button>
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">독립운동가</button>
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this); score++">독립운동가</button>
                 <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
             <dialog> 
                 <div class="card">
-                    <img class="solo-img" src="https://cdn.pajuminbo.com/news/photo/202210/2659_3498_1953.png">
+                    <img class="solo-img" src="정태진.png">
                     <div>
                         <h2 class="name">독립운동가 정태진 선생</h2>
                         <h3>파주 출신인 그는, 한글 지킴에 온몸을 바친 독립운동가이자, 한글 학자이다.</h3>
@@ -50,13 +50,13 @@
             </div>
             <div class="inv" style="text-align: center;">
                 <h1>Q. 다음 인물은 친일파인가요? 독립운동가인가요?</h1>
-                <img class="solo-img" src="https://ojsfile.ohmynews.com/down/images/1/jwh59_196594_1[255497].jpg">
-                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">친일파</button>
+                <img class="solo-img" src="배정자.jpg">
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this); score++">친일파</button>
                 <button class="choice" onclick="showBtn(this.parentNode); chose(this)">독립운동가</button>
                 <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
             <dialog> 
                 <div class="card">
-                    <img class="solo-img" src="https://ojsfile.ohmynews.com/down/images/1/jwh59_196594_1[255497].jpg">
+                    <img class="solo-img" src="배정자.jpg">
                     <div>
                         <h2 class="other-name">친일파 배정자</h2>
                         <h3>이토 히로부미의 수양딸로, 대한제국과 일제강점기에 일본의 밀정으로 활동했다.</h3>
@@ -70,42 +70,44 @@
             <div class="inv" style="text-align: center;">
                 <h1>Q. 다음 중 가장 후원하고 싶은 아이를 고르시오</h1>
                 <span class="flex">
-                    <img class="choice" src="https://mblogthumb-phinf.pstatic.net/MjAxODA5MTBfMTYg/MDAxNTM2NTU2MzQ1NTAy.PlhFj30h76zoQC0nCOvHtsYJAqW97ulYuwpb6a66xcIg.wVHnV6k-h3DwyYGWIvsOhAE-CYhezmQmYppg53lzD-Qg.JPEG.wing04011/9.jpg?type=w800" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
-                    <img class="choice" src="https://mblogthumb-phinf.pstatic.net/20121220_76/bbarksan_1356005868851sc3iV_JPEG/1003.jpg?type=w420" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
-                    <img class="choice" src="data:image/jpeg;base64,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" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
-                    <img class="choice" src="https://i.namu.wiki/i/w9AB6aoWRSDyMXoB9ZBJrP5BkxCYWkUiHuWlOsBQAAeRsz-aQPz0tRBmfVIpXJTNNiqI7HTEZ4ipq6RsMjAfvQ.webp" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="제프리.jpg" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="게리.jpg" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="헨리포드.jpg" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="히틀러.webp" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
                 </span>
                 <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">인물 정보</button>
             <dialog> 
-                <div class="card">
-                    <img class="solo-img" src="https://mblogthumb-phinf.pstatic.net/MjAxODA5MTBfMTYg/MDAxNTM2NTU2MzQ1NTAy.PlhFj30h76zoQC0nCOvHtsYJAqW97ulYuwpb6a66xcIg.wVHnV6k-h3DwyYGWIvsOhAE-CYhezmQmYppg53lzD-Qg.JPEG.wing04011/9.jpg?type=w800">
-                    <div>
-                        <h2 class="other-name">제프리 다머자</h2>
-                        <h3>제프리 다머는 20세기 후반에 미국 밀워키와 위스콘신에서 총 17명을 살해하고 사체 절단 및 인육을 먹은 살인마이다.</h3>
+                <span class="grid">
+                    <div class="card" style="float:left">
+                        <img class="solo-img" src="제프리.jpg">
+                        <div>
+                            <h2 class="other-name">제프리 다머자</h2>
+                            <h3>제프리 다머는 20세기 후반에 미국 밀워키와 위스콘신에서 총 17명을 살해하고 사체 절단 및 인육을 먹은 살인마이다.</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img class="solo-img" src="https://mblogthumb-phinf.pstatic.net/20121220_76/bbarksan_1356005868851sc3iV_JPEG/1003.jpg?type=w420">
-                    <div>
-                        <h2 class="other-name">개리 리지웨이</h2>
-                        <h3>개리는 공식적으로 48명이 넘는 매춘부를 살해한 미국 역대 최대의 연쇄 살인마이다.
-                            희생자의 시신을 대부분 그린 강에 유기해서 ‘그린 강의 살인자’라는 별명이 있다. </h3>
+                    <div class="card" style="float:right">
+                        <img class="solo-img" src="게리.jpg">
+                        <div>
+                            <h2 class="other-name">개리 리지웨이</h2>
+                            <h3>개리는 공식적으로 48명이 넘는 매춘부를 살해한 미국 역대 최대의 연쇄 살인마이다.
+                                희생자의 시신을 대부분 그린 강에 유기해서 ‘그린 강의 살인자’라는 별명이 있다. </h3>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img class="solo-img" src="data:image/jpeg;base64,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">
-                    <div>
-                        <h2 class="name">마이크 타이슨</h2>
-                        <h3>미국의 전 복싱 선수이다. 1980년대와 1990년대에 활동했던 복싱 헤비급 슈퍼스타로, 짧지만 역사상 가장 센세이셔널한 전성기를 보내며 무하마드 알리와 함께 복싱의 아이콘이 되었다.</h3>
+                    <div class="card" style="float:left">
+                        <img class="solo-img" src="헨리포드.jpg">
+                        <div>
+                            <h2 class="name">헨리 포드</h2>
+                            <h3>포드 모터 컴퍼니를 설립한 기업인이자 기술자이며 세계 최초로 자동차의 대량 양산에 성공한 인물이다. </h3>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img class="solo-img" src="https://i.namu.wiki/i/w9AB6aoWRSDyMXoB9ZBJrP5BkxCYWkUiHuWlOsBQAAeRsz-aQPz0tRBmfVIpXJTNNiqI7HTEZ4ipq6RsMjAfvQ.webp">
-                    <div>
-                        <h2 class="other-name">블라디미르 푸틴</h2>
-                        <h3>러시아의 제2·4대 대통령이자 독재자. 러시아-우크라이나 전쟁을 일으킨 장본인이다.</h3>
+                    <div class="card" style="float:right">
+                        <img class="solo-img" src="히틀러.webp">
+                        <div>
+                            <h2 class="other-name">아돌프 히틀러</h2>
+                            <h3>제2차 세계 대전을 일으켜여 막대한 인명 손실을 초래하고, 전쟁 과정에서 일어난 홀로코스트 등 독일의 전쟁범죄에 책임이 있는 전쟁범죄자이다.</h3>
+                        </div>
                     </div>
-                </div>
+                </span>
                 <form method="dialog">
                     <button class="close">X</button>
                 </form>
@@ -117,7 +119,7 @@
                     <img class="choice" src="태극기/1.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
                     <img class="choice" src="태극기/2.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
                     <img class="choice" src="태극기/3.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
-                    <img class="choice" src="태극기/4.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this)">
+                    <img class="choice" src="태극기/4.png" onclick="showBtn(this.parentNode.parentNode); imgChose(this); score++">
                 </span>
                 <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정보</button>
             <dialog> 
@@ -132,30 +134,112 @@
                 </form>
             </dialog>
             </div>
+            <div class="inv" style="text-align: center;">
+                <h1>Q. 다음 인물은 친일파인가요? 독립운동가인가요?</h1>
+                <img class="solo-img" src="송진우.gif">
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">친일파</button>
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this); score++">독립운동가</button>
+                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
+            <dialog> 
+                <div class="card">
+                    <img class="solo-img" src="송진우.gif">
+                    <div>
+                        <h2 class="name">독립운동가 송진우</h2>
+                        <h3>그는 실력 양성이 민족의 독립을 가져온다는 신념하에 물산장려운동, 민립대학기성회 운동 등에 참여, 브나로드 운동 등을 지원하였으며 1920년에는 학교설립 모금운동을 하다가 감시하던 경찰에게 붙잡히기도 했다.</h3>
+                    </div>
+                </div>
+                <form method="dialog">
+                    <button class="close">X</button>
+                </form>
+            </dialog>
+            </div>
+            <div class="inv" style="text-align: center;">
+                <h1>Q. 다음 인물은 친일파인가요? 독립운동가인가요?</h1>
+                <img class="solo-img" src="김병조.jpg">
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this)">친일파</button>
+                <button class="choice" onclick="showBtn(this.parentNode); chose(this); score++">독립운동가</button>
+                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">정답 공개</button>
+            <dialog> 
+                <div class="card">
+                    <img class="solo-img" src="김병조.jpg">
+                    <div>
+                        <h2 class="name">독립운동가 김병조</h2>
+                        <h3>그는 3·1 만세 운동 당시 민족 대표 33인의 한사람이며 대한민국임시의정원 의원으로써 대표적인 독립운동가이다.</h3>
+                    </div>
+                </div>
+                <form method="dialog">
+                    <button class="close">X</button>
+                </form>
+            </dialog>
+            </div>
             <div class="inv">
-                <h1>Q. 2002년 월드컵 패배의 원흉이라 생각되는 인물을 고르시오</h1>
+                <h1>보너스 퀴즈. 잼버리 사태 누구의 잘못인가요?</h1>
+                <button class="choice" onclick="chose(this); score++">전 정부</button>
+                <button class="choice" onclick="chose(this); score++">현 정부</button>
+                <button class="choice" onclick="chose(this); score++">여가부</button>
+                <button class="choice" onclick="chose(this); score++">전북도청</button>
+            </div>
+            <div class="inv" style="text-align: center;">
+                <h1>보너스 퀴즈. 다음 중 가장 운동을 못하는 운동 선수는?</h1>
                 <span class="flex">
                     <div>
-                        <img src="https://cdn.besteleven.com/news/photo/202303/217341_113856_4036.jpg">
-                        <button class="choice" onclick="alert('참가자 분의 선택을 존중합니다.'); chose(this)">이천수</button>
+                        <img src="손흥민.jpg">
+                        <button class="choice" onclick="showBtn(this.parentNode.parentNode.parentNode); chose(this); score++">손흥민</button>
                     </div>
                     <div>
-                        <img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202205/30/eb06fc6a-69b6-4abd-b5fd-bee5baf89951.jpg">  
-                        <button class="choice" onclick="alert('참가자 분의 선택을 존중합니다.'); chose(this)">안정환</button>
+                        <img src="김연아.jpeg">
+                        <button class="choice" onclick="showBtn(this.parentNode.parentNode.parentNode); chose(this); score++">김연아</button>
                     </div>
                     <div>
-                        <img src="https://img.khan.co.kr/news/2021/10/07/l_2021100801000879600079581.jpg">
-                        <button class="choice" onclick="alert('참가자 분의 선택을 존중합니다.'); chose(this)">박지성</button>
+                        <img src="윤성빈.jpg">
+                        <button class="choice" onclick="showBtn(this.parentNode.parentNode.parentNode); chose(this); score++">윤성빈</button>
                     </div>
                     <div>
-                        <img src="https://i.namu.wiki/i/HtCwlRdUD6iZzSNMwWsYEyXj8K63TsXqOvsZYWG3DbhqlcaM6SBl_QJyIOKY_hrk9Q7PZdGYFUuCQcXmnLwEmw.webp">
-                        <button class="choice" onclick="alert('참가자 분의 선택을 존중합니다.'); chose(this)">홍명보</button>
+                        <img src="정찬성.jpg">
+                        <button class="choice" onclick="showBtn(this.parentNode.parentNode.parentNode); chose(this); score++">정찬성</button>
                     </div>
                 </span>
+                <button class="open inv" style="background-color: #FF5B22;" onclick="showModal(this)">인물 정보</button>
+                <dialog> 
+                <span class="grid">
+                    <div class="card" style="float:left">
+                        <img src="손흥민.jpg" class="solo-img">
+                        <div>
+                            <h2 class="name">축구 선수 손흥민</h2>
+                            <h3>현 epl 1위 팀인 토트넘 홋스퍼 FC 소속 공격수로 아시아 최초 epl 득점왕의 칭호를 가지고 있다. 또한 토트넘 홋스퍼 FC와 대한민국 축구 국가대표팀의 주장을 맡고 있다.</h3>
+                        </div>
+                    </div>
+                    <div class="card" style="float:right">
+                        <img src="김연아.jpeg" class="solo-img">
+                        <div>
+                            <h2 class="name">피겨 선수 김연아</h2>
+                            <h3>대한민국의 전 피겨 국가대표 선수이며, 2009년 4대륙 피겨 스케이팅 선수권 대회 우승, ISU 그랑프리 파이널 3회 우승을 통해 피겨 스케이팅의 여자 싱글 부문에서 4대 국제 대회의 그랜드 슬램을 사상 최초로 달성한 선수이기도 하다.</h3>
+                        </div>
+                    </div>
+                    <div class="card" style="float:left">
+                        <img src="윤성빈.jpg" class="solo-img">
+                        <div>
+                            <h2 class="name">스켈레톤 선수 윤성빈</h2>
+                            <h3>대한민국의 전 스켈레톤 선수이며, 2018 평창 동계올림픽에서 혜성같이 등장하였다. 2012년 스켈레톤에 입문하여 3년 8개월 만에 월드컵 우승을 차지했고, 5년 5개월만에 세계 랭킹 1위까지 올랐다. 이어서 3개월 후 대한민국에서 열린 2018 평창 동계올림픽에서는 입문한지 5년 8개월 만에 아시아 최초의 썰매 종목 금메달을 차지했다.</h3>
+                        </div>
+                    </div>
+                    <div class="card" style="float:right">
+                        <img src="정찬성.jpg" class="solo-img">
+                        <div>
+                            <h2 class="name">ufc 선수 정찬성</h2>
+                            <h3>세계 최고의 mma단체인 ufc에서 한국인 최초이고, 유일하게 타이틀 매치(결승전과 비슷한)를 심지어 두번 치른 선수로, 최근 맥스 할로웨이와의 경기에서 패배 후 맥그리거, 찰스 올리베이라, 션 오말리 등 현, 전 챔피언의 샤라웃과 관중들의 함성 소리와 함께 ufc 역사에 길이 남을 은퇴식 명장면을 남기며 은퇴하였다.</h3>
+                        </div>
+                    </div>
+                </span>
+                <form method="dialog">
+                    <button class="close">X</button>
+                </form>
+            </dialog>
             </div>
-            <div class="inv">
-                <h1>감사합니다</h1>
-            </div>
+        </div>
+        <div class="ending">
+            <h1>참가자님의 점수</h1>
+            <h1 class="score-board"></h1>
         </div>
         <button class="btn">다음 문제</button>
     </body>

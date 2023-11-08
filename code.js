@@ -4,6 +4,10 @@ const opens = document.querySelectorAll(".open");
 const dialog = document.querySelector("dialog");
 const choice = document.querySelectorAll(".choice");
 const initBtn = document.querySelector(".initBtn");
+var score = 0;
+const socreBoard = document.querySelector(".score-board");
+const ending = document.querySelector(".ending");
+
 var audio = new Audio("timer.mp3");
 let timer; // 타이머 변수
 let timerDisplay = document.querySelector("#timer"); // 타이머 표시에 사용할 HTML 요소
@@ -45,8 +49,25 @@ function showBtn(t) {
     t.querySelector(".open").style.display = 'inline';
 }
 
+var arr = [];
 let i = 0;
 let j = 0;
+
+function Uni(min, max, count) {
+    if (max - min + 1 < count) {
+        return null;
+    }
+
+    const uniqueIntegers = new Set();
+    while (uniqueIntegers.size < count) {
+        const randomInt = Math.floor(Math.random() * (max - min + 1)) + min;
+        uniqueIntegers.add(randomInt);
+    }
+
+    arr = Array.from(uniqueIntegers);
+}
+
+Uni(0, container.children.length - 1, container.children.length);
 
 function createQuiz() {          
       // 새로운 질문이 생성될 때 타이머를 시작합니다.
@@ -58,15 +79,21 @@ function createQuiz() {
     for (let i = 0; i < choice.length; i++) {
         choice[i].classList.remove("disabled");
     }
-    container.children[j].classList.add("inv");
-    if (j < container.children.length - 1) {
+    container.children[arr[j]].classList.add("inv");
+    if (j < 5) {
         j++;
     }
-    container.children[j].classList.remove("inv");
-    if (j === container.children.length - 1) {
-      timerDisplay.textContent = " ";
-      clearInterval(timer);
+    container.children[arr[j]].classList.remove("inv");
+    if (j === 5) {
       audio.pause();
+      timerDisplay.textContent = " ";
+      clearInterval(timer); // 타이머를 정지합니다.
+      container.children[arr[j]].classList.add("inv");
+      ending.style.display = "inline";
+      socreBoard.innerText = `${(score/5) * 100}점`
+      setTimeout(function() {
+        location.href = "index.html";
+      }, 10000);
     }
 }
 function playAudio() {
@@ -102,7 +129,7 @@ function formatTime(seconds) {
 
 function init() {
     startTimer();
-    container.children[j].classList.remove("inv");
+    container.children[arr[j]].classList.remove("inv");
 }
 init();
 
